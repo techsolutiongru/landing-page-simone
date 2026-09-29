@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://simoneoliveira.com.br/sitemap.xml

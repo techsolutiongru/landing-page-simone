@@ -1,0 +1,73 @@
+﻿.final-cta-section {
+  background-color: #ffffff;
+}
+
+.cta-banner {
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0f3256 50%, var(--color-teal-dark) 100%);
+  color: #ffffff;
+  padding: 4.5rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(10, 37, 64, 0.28);
+}
+
+.cta-glow-element {
+  position: absolute;
+  top: -50%;
+  left: 30%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.2) 0%, rgba(45, 212, 191, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-inner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cta-heading {
+  font-size: 2.35rem;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.cta-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 3rem 1.5rem;
+  }
+  .cta-heading {
+    font-size: 1.75rem;
+  }
+  .cta-body {
+    font-size: 0.975rem;
+  }
+  .cta-buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-buttons-row .btn {
+    width: 100%;
+  }
+}

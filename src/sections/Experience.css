@@ -1,0 +1,135 @@
+﻿.experience-section {
+  background-color: #ffffff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.bento-card {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-teal);
+  box-shadow: var(--shadow-md);
+  background-color: #ffffff;
+}
+
+.bento-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.12) 0%, rgba(10, 37, 64, 0.06) 100%);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.bento-card:hover .bento-icon-wrapper {
+  background: var(--color-teal);
+  color: #ffffff;
+}
+
+.bento-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+  color: var(--color-primary);
+}
+
+.bento-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* Impact Container */
+.impact-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 2.5rem;
+}
+
+.impact-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.impact-header h3 {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.impact-header p {
+  font-size: 1rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.impact-item {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.impact-dot {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-teal);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2);
+}
+
+.impact-item h4 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.impact-item p {
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .impact-container {
+    padding: 2rem 1.5rem;
+  }
+}

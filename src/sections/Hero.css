@@ -1,0 +1,232 @@
+﻿.hero-section {
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 90px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-badge {
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3.35rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.hero-instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.hero-instagram-link:hover {
+  color: var(--color-teal);
+}
+
+.hero-separator {
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-border);
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-teal-dark);
+  font-weight: 500;
+}
+
+/* Visual Column */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+.image-glow-bg {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.25) 0%, rgba(10, 37, 64, 0.15) 100%);
+  border-radius: calc(var(--radius-lg) + 8px);
+  filter: blur(24px);
+  z-index: 1;
+}
+
+.image-frame {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(10, 37, 64, 0.25);
+  border: 4px solid #ffffff;
+  background-color: #ffffff;
+}
+
+.hero-portrait {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition-smooth);
+}
+
+.image-frame:hover .hero-portrait {
+  transform: scale(1.02);
+}
+
+/* Floating Card */
+.floating-badge {
+  position: absolute;
+  bottom: -22px;
+  left: -20px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background-color: #ffffff;
+  padding: 0.9rem 1.35rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 14px 32px rgba(10, 37, 64, 0.14);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  animation: floatEffect 5s ease-in-out infinite;
+}
+
+@keyframes floatEffect {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.floating-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-teal-light);
+  color: var(--color-teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-text strong {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  line-height: 1.25;
+}
+
+.floating-text span {
+  font-size: 0.775rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 991px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-footer-meta {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    max-width: 380px;
+  }
+
+  .floating-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: max-content;
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.35rem;
+  }
+  .hero-section {
+    padding-top: 105px;
+    padding-bottom: 60px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
